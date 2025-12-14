@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamilla | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">Jamilla Moran</div>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="parallax">
+    <div class="overlay">
+      <div class="content-box">
+        <h1>Hi there!</h1>
+        <p>I am <strong>JAMILLA!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="parallax">
+    <div class="overlay">
+      <span class="section-title">ABOUT</span>
+      <div class="content-box">
+        <p>
+          Hi, I'm Jamilla Moran. I'm a passionate and driven second-year Bachelor of Science
+          in Information Technology student. I enjoy exploring the world of technology and
+          creating meaningful projects that make a difference.
+          <br><br>
+          Beyond academics, I'm always eager to learn new skills, take on challenges,
+          and grow both personally and professionally. This website is my space to share
+          my journey, projects, and experiences as I continue building my future in tech.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="parallax">
+    <div class="overlay">
+      <span class="section-title">PROJECTS</span>
+  <div class="projects-grid">
+      <!-- Example project -->
+      <a href="https://shimmering-arithmetic-364b06.netlify.app/?fbclid=IwY2xjawOdDfBleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR4y1qekX-N1NXn_4nfR5dN03U_af70omi_CZXMoLuDlj_qrz7e64DDifiHlkw_aem_-B_tJfRKbg1kSk7vtbenhA" target="_blank" class="project-card">
+        <img src="group.png" alt="Project 1 Screenshot">
+        <div class="project-title">Project 1</div>
+      </a>
+      <a href="https://rochelle215.github.io/Racqran-project-social/" target="_blank" class="project-card">
+        <img src="raqran.png" alt="Project 2 Screenshot">
+        <div class="project-title">Project 2</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="parallax">
+    <div class="overlay">
+      <span class="section-title">CONTACT</span>
+      <div class="content-box">
+       <p>If you want to reach me, feel free to contact me below.</p>
+       <div class="align">
+       <p style="text-align: center; font-size: 15px;">📧 jamjamzoldyck@gmail.com &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 📱 09976475929</p>
+        </div>
+        <div class="loc"> <p>📍Cordova, Cebu, Philippines</p></div> 
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Thank you
+  </footer>
+
+<script>
+  const boxes = document.querySelectorAll('.content-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  boxes.forEach(box => observer.observe(box));
+</script>
